@@ -5,10 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Custom Cursor Sample</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Single+Day&display=swap"
+      rel="stylesheet"
+    /> -->
   </head>
   <body>
-    <h1>Sample Site with Custom Cursor</h1>
-
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#playground">Playground</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <h1 style="font-size: 2em">Hi! There</h1>
+    <h1 style="font-size: 2em">I am Nabil Patel</h1>
     <div class="content">
       <p>This is some content.</p>
       <p>Move your cursor to see the custom SVG cursor.</p>
@@ -33,7 +51,10 @@
       <!-- Modal content -->
       <div class="modal-content">
         <span class="close" onclick="closeModal()"
-          ><img src="close.svg" alt="close" style="height: 30px; width: 30px"
+          ><img
+            src="assets/close.svg"
+            alt="close"
+            style="height: 30px; width: 30px"
         /></span>
         <p>This is a modal!</p>
       </div>
