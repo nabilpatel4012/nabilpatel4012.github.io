@@ -7,6 +7,13 @@ body {
   padding: 0;
 }
 
+.home-section {
+  width: 60%;
+  align-items: start;
+}
+.home-section img {
+  cursor: url("assets/cursor.svg"), auto;
+}
 .content {
   margin-top: 100px;
   cursor: url("assets/cursor.svg"), auto;
