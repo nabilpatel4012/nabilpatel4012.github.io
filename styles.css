@@ -25,6 +25,7 @@ nav {
 
 /* Style for the navbar links */
 nav a {
+  cursor: url("assets/cursor.svg"), auto;
   text-decoration: none;
   color: black;
   font-weight: bold;
