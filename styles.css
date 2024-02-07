@@ -2,16 +2,24 @@ html {
   cursor: url("assets/pointer.svg"), auto;
   font-family: "Poor Story", system-ui;
 }
-/* body {
-  margin: 0;
-  padding: 0;
-} */
+::selection {
+  background-color: #000000; /* Change this to the color you want */
+  color: #ffffff; /* Change this to the text color you want */
+}
+
 body {
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
 ::-webkit-scrollbar {
   display: none;
+}
+
+.home {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
 }
 
 .home-section {
@@ -21,9 +29,10 @@ body {
 .home-section img {
   cursor: url("assets/cursor.svg"), auto;
 }
-.content {
-  margin-top: 100px;
-  cursor: url("assets/cursor.svg"), auto;
+
+.headlines {
+  padding: 10px 50px;
+  font-size: 3em;
 }
 nav {
   z-index: 1000;
@@ -50,6 +59,13 @@ nav a {
   font-size: 1.2em;
   font-weight: bold;
   padding: 10px;
+}
+
+.about-description {
+  padding: 0 50px;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.35em;
 }
 .pre-code {
   display: flex;
@@ -136,4 +152,77 @@ h1 {
 }
 img {
   cursor: url("assets/cursor.svg"), auto;
+}
+.profile-image {
+  height: 200px;
+  width: auto;
+}
+.home-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+}
+.home-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  padding: 30px;
+}
+.hamburger-menu {
+  z-index: 1000;
+  margin: 0 10px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 40px;
+  display: none;
+  width: 100%;
+  padding: 30px;
+}
+.hamburger-menu img {
+  float: right;
+  cursor: url("assets/cursor.svg"), auto;
+}
+@media (max-width: 880px) {
+  .home-right {
+    display: none;
+  }
+  .home-left {
+    height: 100%;
+    width: 100%;
+  }
+}
+@media (max-width: 550px) {
+  nav {
+    display: none;
+  }
+  .hamburger-menu {
+    display: block;
+  }
+  .headlines {
+    font-size: 2em;
+  }
+  .about-description {
+    font-size: 1em;
+  }
+}
+
+.frame {
+  width: 400px;
+  height: 350px;
+  border: 8px solid black;
+  border-top-left-radius: 37px 140px;
+  border-top-right-radius: 23px 130px;
+  border-bottom-left-radius: 10px 19px;
+  border-bottom-right-radius: 120px 24px;
+  overflow: hidden;
+  position: relative;
+}
+.frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
 }

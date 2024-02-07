@@ -27,13 +27,33 @@
       <a href="#playground">Playground</a>
       <a href="#contact">Contact</a>
     </nav>
-    <h1 style="font-size: 2em">Hi! There</h1>
-    <h1 style="font-size: 2em">I am Nabil Patel</h1>
-    <div class="content">
-      <p>This is some content.</p>
-      <p>Move your cursor to see the custom SVG cursor.</p>
+    <div class="hamburger-menu">
+      <img src="assets/hamburger.svg" alt="menu" />
     </div>
-    <div class="pre-code">
+    <section class="home">
+      <div class="home-left">
+        <div class="headlines">
+          <h1>Hi! There</h1>
+          <h1>I am Nabil Patel</h1>
+        </div>
+        <div class="about-description">
+          <h2>
+            As a software developer, I'm all about diving into challenges
+            head-on, fueled by a passion for open-source solutions. With over a
+            year of hands-on experience, my expertise lies in web development,
+            where I'm fluent in languages like JavaScript, TypeScript, and
+            Golang. My projects reflect a dedication to user-centric design and
+            out-of-the-box problem-solving.
+          </h2>
+        </div>
+      </div>
+      <div class="home-right">
+        <div class="frame">
+          <img src="assets/profile.png" alt="Profile Picture" />
+        </div>
+      </div>
+    </section>
+    <!-- <div class="pre-code">
       <pre style="padding-left: 0px">
       html {
         cursor: url("pointer.svg"), auto;
@@ -49,7 +69,7 @@
         alt="copy"
         style="height: 40px; width: 40px; align-self: flex-end"
       />
-    </div>
+    </div> -->
     <!-- Button to open the modal -->
     <button class="modal-btn" onclick="openModal()">Open Modal</button>
 
@@ -66,81 +86,6 @@
         <p>This is a modal!</p>
       </div>
     </div>
-    <div class="content">
-      <p>This is some content.</p>
-      <p>Move your cursor to see the custom SVG cursor.</p>
-    </div>
-    <div class="pre-code">
-      <pre style="padding-left: 0px">
-      html {
-        cursor: url("pointer.svg"), auto;
-      }
-      
-      .content {
-        margin-top: 100px;
-        cursor: url("cursor.svg"), auto;
-      }
-      </pre>
-      <img
-        src="assets/copy.svg"
-        alt="copy"
-        style="height: 40px; width: 40px; align-self: flex-end"
-      />
-    </div>
-    <!-- Button to open the modal -->
-    <button class="modal-btn" onclick="openModal()">Open Modal</button>
-
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-      <!-- Modal content -->
-      <div class="modal-content">
-        <span class="close" onclick="closeModal()"
-          ><img
-            src="assets/close.svg"
-            alt="close"
-            style="height: 30px; width: 30px"
-        /></span>
-        <p>This is a modal!</p>
-      </div>
-    </div>
-    <div class="content">
-      <p>This is some content.</p>
-      <p>Move your cursor to see the custom SVG cursor.</p>
-    </div>
-    <div class="pre-code">
-      <pre style="padding-left: 0px">
-      html {
-        cursor: url("pointer.svg"), auto;
-      }
-      
-      .content {
-        margin-top: 100px;
-        cursor: url("cursor.svg"), auto;
-      }
-      </pre>
-      <img
-        src="assets/copy.svg"
-        alt="copy"
-        style="height: 40px; width: 40px; align-self: flex-end"
-      />
-    </div>
-    <!-- Button to open the modal -->
-    <button class="modal-btn" onclick="openModal()">Open Modal</button>
-
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-      <!-- Modal content -->
-      <div class="modal-content">
-        <span class="close" onclick="closeModal()"
-          ><img
-            src="assets/close.svg"
-            alt="close"
-            style="height: 30px; width: 30px"
-        /></span>
-        <p>This is a modal!</p>
-      </div>
-    </div>
-
     <script src="script.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"
