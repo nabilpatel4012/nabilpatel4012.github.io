@@ -6,6 +6,10 @@
     <title>Portfolio</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/vs.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,17 +33,96 @@
       <p>This is some content.</p>
       <p>Move your cursor to see the custom SVG cursor.</p>
     </div>
-    <div>
-      <pre class="pre-code">
-        html {
-          cursor: url("pointer.svg"), auto;
-        }
-        
-        .content {
-          margin-top: 100px;
-          cursor: url("cursor.svg"), auto;
-        }
+    <div class="pre-code">
+      <pre style="padding-left: 0px">
+      html {
+        cursor: url("pointer.svg"), auto;
+      }
+      
+      .content {
+        margin-top: 100px;
+        cursor: url("cursor.svg"), auto;
+      }
       </pre>
+      <img
+        src="assets/copy.svg"
+        alt="copy"
+        style="height: 40px; width: 40px; align-self: flex-end"
+      />
+    </div>
+    <!-- Button to open the modal -->
+    <button class="modal-btn" onclick="openModal()">Open Modal</button>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()"
+          ><img
+            src="assets/close.svg"
+            alt="close"
+            style="height: 30px; width: 30px"
+        /></span>
+        <p>This is a modal!</p>
+      </div>
+    </div>
+    <div class="content">
+      <p>This is some content.</p>
+      <p>Move your cursor to see the custom SVG cursor.</p>
+    </div>
+    <div class="pre-code">
+      <pre style="padding-left: 0px">
+      html {
+        cursor: url("pointer.svg"), auto;
+      }
+      
+      .content {
+        margin-top: 100px;
+        cursor: url("cursor.svg"), auto;
+      }
+      </pre>
+      <img
+        src="assets/copy.svg"
+        alt="copy"
+        style="height: 40px; width: 40px; align-self: flex-end"
+      />
+    </div>
+    <!-- Button to open the modal -->
+    <button class="modal-btn" onclick="openModal()">Open Modal</button>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()"
+          ><img
+            src="assets/close.svg"
+            alt="close"
+            style="height: 30px; width: 30px"
+        /></span>
+        <p>This is a modal!</p>
+      </div>
+    </div>
+    <div class="content">
+      <p>This is some content.</p>
+      <p>Move your cursor to see the custom SVG cursor.</p>
+    </div>
+    <div class="pre-code">
+      <pre style="padding-left: 0px">
+      html {
+        cursor: url("pointer.svg"), auto;
+      }
+      
+      .content {
+        margin-top: 100px;
+        cursor: url("cursor.svg"), auto;
+      }
+      </pre>
+      <img
+        src="assets/copy.svg"
+        alt="copy"
+        style="height: 40px; width: 40px; align-self: flex-end"
+      />
     </div>
     <!-- Button to open the modal -->
     <button class="modal-btn" onclick="openModal()">Open Modal</button>
@@ -59,7 +142,21 @@
     </div>
 
     <script src="script.js"></script>
-
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"
+      integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Adding syntax highlighting in <pre> tag -->
+    <script>
+      var preTags = document.getElementsByTagName("pre");
+      var size = preTags.length;
+      for (var i = 0; i < size; i++) {
+        preTags[i].innerHTML = "<code>" + preTags[i].innerHTML + "</code>"; // wrap content of pre tag in code tag
+      }
+      hljs.highlightAll(); // apply highlighting
+    </script>
     <script>
       // Get the modal
       var modal = document.getElementById("myModal");
