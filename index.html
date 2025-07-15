@@ -3,9 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <title>Nabil Patel - Portfolio</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/vs.css"
@@ -16,21 +15,60 @@
       href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./styles.css" />
+
+    <script src="./script.js"></script>
   </head>
   <body>
     <nav>
-      <div class="home-section">
-        <img src="assets/home.svg" alt="home" />
+      <div class="nav-left">
+        <div class="home-section">
+          <img id="homeIcon" src="assets/favicon.svg" alt="home" />
+        </div>
       </div>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#playground">Playground</a>
-      <a href="#contact">Contact</a>
+      <div class="nav-center">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()">
+        dark mode (why not?)
+      </button>
     </nav>
+
     <div class="hamburger-menu">
-      <img src="assets/hamburger.svg" alt="menu" />
+      <button class="mobile-theme-toggle" onclick="toggleTheme()">
+        dark mode (why not?)
+      </button>
+      <img
+        id="hamburgerImage"
+        src="assets/hamburger.svg"
+        alt="menu"
+        onclick="toggleMobileNav()"
+      />
     </div>
-    <section class="home">
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav" id="mobileNav">
+      <button class="mobile-nav-close" onclick="toggleMobileNav()">
+        <img id="closeImage" src="assets/cross.svg" alt="close" />
+      </button>
+      <div class="mobile-nav-content">
+        <a href="#home" onclick="toggleMobileNav()">Home</a>
+        <a href="#about" onclick="toggleMobileNav()">About</a>
+        <a href="#experience" onclick="toggleMobileNav()">Experience</a>
+        <a href="#projects" onclick="toggleMobileNav()">Projects</a>
+        <a href="#skills" onclick="toggleMobileNav()">Skills</a>
+        <a href="#education" onclick="toggleMobileNav()">Education</a>
+        <a href="#contact" onclick="toggleMobileNav()">Contact</a>
+      </div>
+    </div>
+
+    <section id="home" class="home">
       <div class="home-left">
         <div class="headlines">
           <h1>Hi! There</h1>
@@ -39,11 +77,11 @@
         <div class="about-description">
           <h2>
             As a software developer, I'm all about diving into challenges
-            head-on, fueled by a passion for open-source solutions. With over a
-            year of hands-on experience, my expertise lies in web development,
-            where I'm fluent in languages like JavaScript, TypeScript, and
-            Golang. My projects reflect a dedication to user-centric design and
-            out-of-the-box problem-solving.
+            head-on, fueled by a passion for open-source solutions. With over 2
+            years of hands-on experience, my expertise lies in full-stack web
+            development, where I'm fluent in languages like JavaScript,
+            TypeScript, and Golang. My projects reflect a dedication to
+            user-centric approach and innovative problem-solving.
           </h2>
         </div>
       </div>
@@ -53,75 +91,370 @@
         </div>
       </div>
     </section>
-    <!-- <div class="pre-code">
-      <pre style="padding-left: 0px">
-      html {
-        cursor: url("pointer.svg"), auto;
-      }
-      
-      .content {
-        margin-top: 100px;
-        cursor: url("cursor.svg"), auto;
-      }
-      </pre>
-      <img
-        src="assets/copy.svg"
-        alt="copy"
-        style="height: 40px; width: 40px; align-self: flex-end"
-      />
-    </div> -->
-    <!-- Button to open the modal -->
-    <button class="modal-btn" onclick="openModal()">Open Modal</button>
 
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-      <!-- Modal content -->
-      <div class="modal-content">
-        <span class="close" onclick="closeModal()"
-          ><img
-            src="assets/close.svg"
-            alt="close"
-            style="height: 30px; width: 30px"
-        /></span>
-        <p>This is a modal!</p>
+    <section id="about" class="section">
+      <div class="content-section">
+        <h2 class="section-title" style="margin-bottom: 0px !important">
+          About Me
+        </h2>
+        <div
+          style="display: flex; justify-content: center; align-items: center"
+        >
+          <p>(Read in any order)</p>
+        </div>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              Hey there! I'm a passionate software developer from Earth who
+              loves turning complex problems into elegant solutions. My tech
+              journey kicked off in college, and I've been hooked on building
+              impactful applications ever since.
+            </p>
+            <p>
+              I thrive in the full-stack world, crafting everything from robust
+              backends to sleek frontends. There's something magical about
+              seeing an idea come to life through code, especially when it makes
+              users' lives easier.
+            </p>
+          </div>
+          <div class="about-text">
+            <p>
+              When I'm not deep in code, you'll catch me tinkering with new
+              technologies, contributing to open-source projects, or geeking out
+              with fellow developers. I'm a firm believer that the best way to
+              stay sharp is to never stop learning.
+            </p>
+            <p>
+              What really drives me is creating user-centric experiences that
+              just work. I bring together technical know-how with creative
+              problem-solving, plus a healthy obsession with getting the details
+              right.
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-    <script src="script.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"
-      integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <!-- Adding syntax highlighting in <pre> tag -->
-    <script>
-      var preTags = document.getElementsByTagName("pre");
-      var size = preTags.length;
-      for (var i = 0; i < size; i++) {
-        preTags[i].innerHTML = "<code>" + preTags[i].innerHTML + "</code>"; // wrap content of pre tag in code tag
-      }
-      hljs.highlightAll(); // apply highlighting
-    </script>
-    <script>
-      // Get the modal
-      var modal = document.getElementById("myModal");
+    </section>
 
-      // Function to open the modal
-      function openModal() {
-        modal.style.display = "block";
-      }
+    <section id="experience" class="section">
+      <div class="content-section">
+        <h2 class="section-title">Work Experience</h2>
+        <div class="experience-timeline">
+          <div class="experience-item">
+            <div class="experience-header">
+              <div>
+                <h3 class="experience-title">Software Developer</h3>
+                <p class="experience-company">Tekgeminus Solutions Pvt Ltd</p>
+              </div>
+              <div class="experience-date">June 2024 - Present</div>
+            </div>
+            <div class="experience-description">
+              <ul>
+                <li>
+                  Led the end-to-end development of a finance-related product
+                  from scratch using Angular, implementing best practices and
+                  scalable deployment strategies.
+                </li>
+                <li>
+                  Built a robust, high-performance frontend with advanced
+                  development techniques, ensuring an intuitive user experience.
+                </li>
+                <li>
+                  Designed and optimized system architecture while integrating
+                  cloud technologies for seamless scalability and reliability.
+                </li>
+                <li>
+                  Drove the implementation of CI/CD pipelines, automated
+                  testing, and monitoring for efficient and secure deployments.
+                </li>
+              </ul>
+            </div>
+          </div>
 
-      // Function to close the modal
-      function closeModal() {
-        modal.style.display = "none";
-      }
+          <div class="experience-item">
+            <div class="experience-header">
+              <div>
+                <h3 class="experience-title">Intern Software Trainee</h3>
+                <p class="experience-company">Tekgeminus Solutions Pvt Ltd</p>
+              </div>
+              <div class="experience-date">August 2022 – May 2024</div>
+            </div>
+            <div class="experience-description">
+              <ul>
+                <li>
+                  Developed a Web Self-Service Portal in the utility domain
+                  using React, TypeScript, C2M APIs, and payment gateway
+                  integration, enhancing user experience and transactions.
+                </li>
+                <li>
+                  Built a scalable, responsive frontend with seamless user
+                  interactions.
+                </li>
+                <li>
+                  Implemented an Outlook Email Automation System to send
+                  personalized birthday and work anniversary emails, improving
+                  employee recognition.
+                </li>
+                <li>
+                  Automated data extraction from Excel, scheduled dispatches via
+                  Cron Jobs, and optimized performance with Python, SMTP, and
+                  Redis.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      // Close the modal when clicking outside of it
-      window.onclick = function (event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
-        }
-      };
-    </script>
+    <section id="projects" class="section">
+      <div class="content-section">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <h3 class="project-title">Smaapi - APIs made simple</h3>
+            <p class="project-description">
+              A full-stack API builder platform that enables users to create
+              APIs through an intuitive web interface. Features dynamic API
+              generation with pagination, column selection, sorting, filtering,
+              and search capabilities.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">Fastify</span>
+              <span class="tech-tag">Kysely</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">MongoDB</span>
+            </div>
+            <p class="project-status">Currently in development</p>
+          </div>
+
+          <div class="project-card">
+            <h3 class="project-title">Full Stack OMS + CRM App</h3>
+            <p class="project-description">
+              A comprehensive OMS + CRM web application designed to help local
+              service providers transition to the online market. Features
+              business management tools, insights, real-time tracking, and
+              customer management capabilities.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Material UI</span>
+              <span class="tech-tag">Golang</span>
+              <span class="tech-tag">Gin</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">Docker</span>
+              <span class="tech-tag">AWS S3</span>
+            </div>
+            <p class="project-status">Completed</p>
+          </div>
+
+          <div class="project-card">
+            <h3 class="project-title">Web Self-Service Portal</h3>
+            <p class="project-description">
+              A utility domain web portal with payment gateway integration,
+              built for enhanced user experience and seamless transactions.
+              Features responsive design and robust backend integration.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">C2M APIs</span>
+              <span class="tech-tag">Payment Gateway</span>
+            </div>
+            <p class="project-status">Completed at Tekgeminus</p>
+          </div>
+
+          <div class="project-card">
+            <h3 class="project-title">Email Automation System</h3>
+            <p class="project-description">
+              An automated email system for sending personalized birthday and
+              work anniversary emails. Features Excel data extraction, scheduled
+              dispatches, and performance optimization.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">SMTP</span>
+              <span class="tech-tag">Redis</span>
+              <span class="tech-tag">Cron Jobs</span>
+              <span class="tech-tag">Excel Integration</span>
+            </div>
+            <p class="project-status">Completed at Tekgeminus</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="content-section">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Programming Languages</h3>
+            <div class="skill-tag">JavaScript</div>
+            <div class="skill-tag">TypeScript</div>
+            <div class="skill-tag">Java</div>
+            <div class="skill-tag">Golang</div>
+            <div class="skill-tag">Python</div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Frontend Technologies</h3>
+            <div class="skill-tag">React.js</div>
+            <div class="skill-tag">Angular</div>
+            <div class="skill-tag">HTML5</div>
+            <div class="skill-tag">CSS3</div>
+            <div class="skill-tag">Material UI</div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Backend Technologies</h3>
+            <div class="skill-tag">Node.js</div>
+            <div class="skill-tag">NestJS</div>
+            <div class="skill-tag">Gin</div>
+            <div class="skill-tag">Spring</div>
+            <div class="skill-tag">Fastify</div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Databases</h3>
+            <div class="skill-tag">PostgreSQL</div>
+            <div class="skill-tag">MongoDB</div>
+            <div class="skill-tag">Redis</div>
+            <div class="skill-tag">Kysely</div>
+          </div>
+
+          <div class="skill-category">
+            <h3>DevOps & Cloud</h3>
+            <div class="skill-tag">Linux</div>
+            <div class="skill-tag">Docker</div>
+            <div class="skill-tag">AWS</div>
+            <div class="skill-tag">CI/CD</div>
+            <div class="skill-tag">AWS S3</div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Tools & Concepts</h3>
+            <div class="skill-tag">Git</div>
+            <div class="skill-tag">GitHub</div>
+            <div class="skill-tag">Bitbucket</div>
+            <div class="skill-tag">OOP</div>
+            <div class="skill-tag">DSA</div>
+            <div class="skill-tag">DBMS</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section">
+      <div class="content-section">
+        <h2 class="section-title">Education</h2>
+        <div class="education-info">
+          <h3 class="education-title">Bachelor of Technology in ICE</h3>
+          <div class="education-details">
+            <p><strong>Vishwakarma Institute of Technology, Pune</strong></p>
+            <p style="color: black">Graduated: May 2024</p>
+            <p style="color: black"><strong>CGPA: 8.21</strong></p>
+            <p style="color: black">
+              During my academic journey, I developed a strong foundation in
+              computer science fundamentals, data structures, algorithms, and
+              software engineering principles. I actively participated in coding
+              competitions and contributed to various technical projects that
+              enhanced my practical skills.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="content-section">
+        <h2 class="section-title">Let's Connect</h2>
+        <p
+          style="
+            display: flex;
+            justify-content: center;
+            font-size: 18px;
+            margin-bottom: -10px;
+          "
+        >
+          ( If you wanna see my "Résumé" )
+        </p>
+        <div class="contact-actions">
+          <a
+            href="assets/Nabil-Patel-Resume-BLR.pdf"
+            download="Nabil-Patel-Resume.pdf"
+            class="resume-btn"
+            style="display: flex; justify-content: space-evenly"
+            ><h2>Résumé</h2>
+            <img
+              id="downloadImage"
+              src="assets/download.svg"
+              height="30"
+              width="30"
+          /></a>
+        </div>
+        <div class="contact-container">
+          <p style="font-size: 1.5em; color: #000; margin-bottom: 40px">
+            I'm always open to discussing new opportunities, collaborations, or
+            just having a chat about technology. Feel free to reach out!
+          </p>
+          <div class="contact-info">
+            <div class="contact-item">
+              <h3>Email</h3>
+              <a
+                class="contact-information"
+                href="mailto:nabilpatel4012@gmail.com"
+                >nabilpatel4012@gmail.com</a
+              >
+            </div>
+            <div class="contact-item">
+              <h3>Phone</h3>
+              <a href="tel:+917522992713">+91 7522992713</a>
+            </div>
+            <div class="contact-item">
+              <h3>GitHub</h3>
+              <a href="https://github.com/nabilpatel4012" target="_blank"
+                >nabilpatel4012</a
+              >
+            </div>
+            <div class="contact-item">
+              <h3>Location</h3>
+              <p>Earth - Milky Way Galaxy</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          style="display: flex; justify-content: center; align-items: center"
+        >
+          <h3 style="margin-right: 5px !important">Made with</h3>
+          <h3>
+            <span class="heart-container">
+              <img
+                id="heartIcon"
+                class="heart-image active"
+                style="margin-bottom: -15px"
+                src="assets/heart.svg"
+                alt="heart"
+                height="30"
+                width="30"
+              />
+              <img
+                id="loveIcon"
+                class="heart-image"
+                style="margin-bottom: -10px"
+                src="assets/love.svg"
+                alt="heart"
+                height="35"
+                width="35"
+              />
+            </span>
+          </h3>
+          <h3 style="margin-left: 5px !important">by Nabil Patel</h3>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
