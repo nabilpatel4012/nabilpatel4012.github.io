@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nabilpatel.xyz/sitemap.xml
+
+Disallow: /assets/Nabil-Patel-Resume-BLR.pdf
+Disallow: *.css$
+Disallow: *.js$
+
+User-agent: Googlebot
+Allow: *.css$
+Allow: *.js$
+Allow: /assets/
+
+User-agent: Bingbot
+Allow: *.css$
+Allow: *.js$
+Allow: /assets/
+
+User-agent: Slurp
+Allow: *.css$
+Allow: *.js$
+Allow: /assets/
+
+Crawl-delay: 1

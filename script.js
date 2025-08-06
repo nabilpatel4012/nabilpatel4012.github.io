@@ -5,6 +5,8 @@ function updateIcons(isDarkMode) {
   const hamburgerIcon = document.getElementById("hamburgerImage");
   const closeIcon = document.getElementById("closeImage");
   const downloadIcon = document.getElementById("downloadImage");
+  const arrowIcon = document.getElementById("arrowImage");
+  const curvedLineIcon = document.getElementById("curvedLineImage");
 
   if (isDarkMode) {
     homeIcon.src = "assets/favicon-light.svg";
@@ -13,6 +15,8 @@ function updateIcons(isDarkMode) {
     hamburgerIcon.src = "assets/hamburger-light.svg";
     closeIcon.src = "assets/cross-light.svg";
     downloadIcon.src = "assets/download-light.svg";
+    arrowIcon.src = "assets/arrow-light.svg";
+    curvedLineIcon.src = "assets/curved-underline-light.svg";
   } else {
     homeIcon.src = "assets/favicon.svg";
     heartIcon.src = "assets/heart.svg";
@@ -20,6 +24,8 @@ function updateIcons(isDarkMode) {
     hamburgerIcon.src = "assets/hamburger.svg";
     closeIcon.src = "assets/cross.svg";
     downloadIcon.src = "assets/download.svg";
+    arrowIcon.src = "assets/arrow.svg";
+    curvedLineIcon.src = "assets/curved-underline.svg";
   }
 }
 function toggleTheme() {
@@ -130,6 +136,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const hamburgerIcon = document.getElementById("hamburgerImage");
     const closeIcon = document.getElementById("closeImage");
     const downloadIcon = document.getElementById("downloadImage");
+    const arrowIcon = document.getElementById("arrowImage");
+    const curvedLineIcon = document.getElementById("curvedLineImage");
     html.classList.add("dark-mode");
     themeButton.textContent = "light mode (blinding!!)";
     homeIcon.src = "assets/favicon-light.svg";
@@ -138,6 +146,8 @@ document.addEventListener("DOMContentLoaded", function () {
     hamburgerIcon.src = "assets/hamburger-light.svg";
     closeIcon.src = "assets/cross-light.svg";
     downloadIcon.src = "assets/download-light.svg";
+    arrowIcon.src = "assets/arrow-light.svg";
+    curvedLineIcon.src = "assets/curved-underline-light.svg";
     mobileThemeButton.textContent = "light mode (blinding!!)";
   } else {
     html.classList.remove("dark-mode");

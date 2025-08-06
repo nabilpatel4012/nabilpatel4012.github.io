@@ -252,6 +252,11 @@ nav a:hover {
   padding: 30px;
 }
 
+.highlight-name {
+  color: #2563eb;
+  font-weight: bold;
+}
+
 .headlines {
   padding: 10px 50px;
   font-size: 3em;
